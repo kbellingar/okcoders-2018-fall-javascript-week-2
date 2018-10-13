@@ -4,18 +4,35 @@
     </head> 
     
     <body>
+        <h2>This is the title </h2>
         <input type="text" id="one">
-        <input type="text" id="two">
         <button onClick="myMessage()" id="doSomething">Click Me!</button>
-        <header>Let's give this a shot!</header>
+        <ul id="msg">
+            <li>this is my message.</li>
+        </ul>
+        
+        
 
 
     </body>
     <script>
+        var color = "crimson";
         function myMessage(){
-        var message = "this is a message"
-        console.log(message);
-        alert(message);
+            var one = document.getElementById("one");
+           var msg = document.getElementById("msg")
+            var newListItem = one.value;
+            one.value = "";
+        document.getElementById
+       // console.log(newListItem);
+        //document..getElementById("pageTitle").value = newTitle;
+        var curList = msg.innerHTML;
+        msg.innerHTML = curList + "<li>" + newListItem + "</li>";
+        if(color === "crimson") {
+            color = "blue";
+        } else {
+            color = "crimson";
+        }
+        msg.style="background: " + color;
         }
         </script>
 </html>
